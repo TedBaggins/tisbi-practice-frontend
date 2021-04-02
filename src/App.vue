@@ -1,28 +1,48 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <TpTopmenu/>
+        <router-view />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    import TpTopmenu from '@/components/Topmenu';
+    export default {
+        name: 'App',
+        components: {
+            TpTopmenu
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    html, body {
+        height: 100%;
+        background: #181a1d;
+        color: #dbdbdb;
+    }
+    .content-box {
+        padding-top: 20px;
+    }
+    .form-group {
+        padding: 0 10px;
+    }
+    .form-box {
+        border: 1px solid #4b5258;
+    }
+    .form-title-box {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 0;
+    }
+    .form-btn-box {
+        background: #3e444a;
+        padding: 10px 10px;
+    }
+    .btn-delete {
+        background: #b7524b;
+        color: #dbdbdb;
+    }
 </style>
+
+
